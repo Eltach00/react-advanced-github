@@ -8,12 +8,16 @@ export default function FavouritesPage() {
     return <p className="text-center">No items.</p>
   }
   return (
-    <ul className="list-none">
-      {favorourites.map((fav) => (
-        <li key={fav}>
-          <a href={fav}>{}</a>
-        </li>
-      ))}
-    </ul>
+    <div className="flex justify-center pt-10 mx-auto h-screen w-screen">
+      <ul className="list-none">
+        {favorourites.map((fav) => (
+          <li key={fav}>
+            <a href={fav} target="_blank">
+              {fav}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
   )
 }
